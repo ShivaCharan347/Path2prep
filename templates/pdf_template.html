@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Script PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .podcast-content {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="podcast-content">
+        {{ podcast_script | safe }}
+    </div>
+</body>
+</html>

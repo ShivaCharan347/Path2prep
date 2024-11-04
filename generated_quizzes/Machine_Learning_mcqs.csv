@@ -1,0 +1,9 @@
+Which of these is NOT a type of machine learning?,Supervised Learning,Unsupervised Learning,Reinforcement Learning,Deterministic Programming,D
+What is the purpose of a loss function in machine learning?,To measure the performance of a machine learning model,To train a machine learning model,To evaluate the data quality,To visualize the training process,A
+Which algorithm is commonly used for classification tasks?,Linear Regression,K-Means Clustering,Support Vector Machine,Principal Component Analysis,C
+What is overfitting in machine learning?,When a model performs well on training data but poorly on unseen data,When a model performs poorly on both training and unseen data,When a model is too complex and requires too much data to train,When a model is too simple and cannot capture the underlying patterns in the data,A
+What is cross-validation used for?,To evaluate the performance of a machine learning model,To train a machine learning model,To select the best hyperparameters for a model,To visualize the training process,C
+Which of these is a type of neural network architecture?,Convolutional Neural Network,Decision Tree,Linear Regression,K-Means Clustering,A
+What does the term 'bias' refer to in machine learning?,The error introduced by approximating a real-world problem with a simplified model,The amount of data required to train a model,The complexity of a machine learning algorithm,The time required to train a model,A
+What is the role of activation functions in neural networks?,To introduce non-linearity into the model,To measure the performance of the network,To train the network,To visualize the network,A
+Which technique is used for dimensionality reduction in machine learning?,Principal Component Analysis,Linear Regression,K-Means Clustering,Support Vector Machine,A

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">MCQ Quiz</h2>
+        <form method="POST" action="{{ url_for('quiz') }}">
+            {% for question in questions %}
+            <div class="mb-4">
+                <h5>{{ loop.index }}. {{ question.question }}</h5>
+                <div>
+                    {% for option in question.options %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q{{ loop.index }}" 
+                               value="{{ option }}" 
+                               {% if request.form.get('q' ~ loop.index) == option %} checked {% endif %}>
+                        <label class="form-check-label">{{ option }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-success mt-3">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>
