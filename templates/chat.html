@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Path2Prep - Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center light-background sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Path2Prep - Chatbot</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('study_plan') }}">Study Plan</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="chatbot-form" class="chatbot-form section">
+            <div class="container">
+                <h2 class="text-center">Ask a Question</h2>
+                <div class="input-container text-center">
+                    <form action="{{ url_for('chat') }}" method="POST">
+                        <input type="text" id="question" name="question" class="form-control" placeholder="Enter your question" required>
+                        <button type="submit" class="btn btn-primary mt-3">Generate</button>
+                    </form>
+                </div>
+
+                {% if answer %}
+                <div class="output-box mt-4">
+                    <h4>Answer:</h4>
+                    <p>{{ answer|safe }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer light-background">
+        <div class="container text-center">
+            <p>© All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

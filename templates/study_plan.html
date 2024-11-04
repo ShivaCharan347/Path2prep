@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Path2Prep - Study Plan</title>
+    <meta name="description" content="Generate Creative Content">
+    <meta name="keywords" content="Content, Creator, Generation">
+
+    <!-- Fonts and CSS Files -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .input-container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .output-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center light-background sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Path2Prep - Study Plan</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Study Plan Services</a></li>
+                    
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="input-form" class="input-form section">
+            <div class="container">
+                <h2 class="text-center">Input Your Study Plan Details</h2>
+                <div class="input-container">
+                    <form action="{{ url_for('study_plan') }}" method="POST">
+                        <input type="text" id="topic" name="topic" class="form-control" placeholder="Enter study topic" required>
+                        <input type="text" id="days" name="days" class="form-control mt-3" placeholder="How many days are left?" required>
+                        <button type="submit" class="btn btn-primary mt-3">Generate</button>
+                    </form>
+                </div>
+
+                {% if answer %}
+                <div class="output-box">
+                    <h4>Answer:</h4>
+                    <p>{{ answer|safe }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer light-background">
+        <div class="container text-center">
+            <p>© All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

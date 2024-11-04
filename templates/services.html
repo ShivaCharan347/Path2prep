@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Path2Prep - Study Plan</title>
+    <meta name="description" content="Generate Creative Content">
+    <meta name="keywords" content="Content, Creator, Generation">
+
+    <!-- Fonts and CSS Files -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .service-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+        .service-box img {
+            width: 350px;
+            height: 280px;
+            margin-bottom: 10px;
+        }
+        .service-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .service-box p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center light-background sticky-top">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">Path2Prep - Study Plan</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Study plan Services</a></li>
+                   
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="services" class="services section">
+            <div class="container section-title">
+                <h2>Path2Prep - Study Plan</h2>
+            </div>
+
+            <!-- Three Boxes Side by Side with Tap Navigation -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Box 1 -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('study_plan') }}" class="text-decoration-none">
+                            <div class="service-box">
+                                <img src="../static/assets/img/Study plan.jpg" alt="Topic Generation">
+                                <h4>Study Plan</h4>
+                                <p>Tailored curriculum with structured milestones for effective studying.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('chat') }}" class="text-decoration-none">
+                            <div class="service-box">
+                                <img src="../static/assets/img/Query chatbot.png" alt="Guest Invitations">
+                                <h4>Query ChatBot</h4>
+                                <p>Instantly addressing study queries helps you stay on track.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="col-md-4">
+                        <a href="{{ url_for('mcq') }}" class="text-decoration-none">
+                            <div class="service-box">
+                                <img src="../static/assets/img/pod.jpg" alt="Language Support">
+                                <h4>Mock Prep</h4>
+                                <p>Practice tests to enhance exam readiness and confidence.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer light-background">
+        <div class="container text-center">
+            <p>© All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
